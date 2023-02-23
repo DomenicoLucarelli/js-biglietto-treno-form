@@ -19,6 +19,7 @@ let etaEl ;
 let distanzaEl ;
 let nomeEl ;
 let cognomeEl ;
+let bigliettoEl;
 
 btnEl.addEventListener("click", function(){
     nomeEl=document.getElementById("nome").value;
@@ -29,6 +30,11 @@ btnEl.addEventListener("click", function(){
 
     distanzaEl=document.getElementById("distanza").value;
 
+    bigliettoEl=document.getElementById("biglietto")
+    bigliettoEl.style.display=("block");
+
+    
+
     let prezzoNonScontato = (0.21 * distanzaEl);
 // console.log(prezzoNonScontato);
 
@@ -36,7 +42,7 @@ btnEl.addEventListener("click", function(){
 
         let prezzoFinale = ( prezzoNonScontato - (prezzoNonScontato * 20 / 100 ) )
 
-        document.getElementById("nome-mostrato").innerHTML= nomeEl;
+        document.getElementById("nome-mostrato").value= nomeEl;
 
         document.getElementById("cognome-mostrato").innerHTML= cognomeEl;
 
