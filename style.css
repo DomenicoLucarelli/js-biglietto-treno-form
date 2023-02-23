@@ -4,6 +4,12 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
+body{
+    background-image: url("https://static.vecteezy.com/ti/foto-gratuito/p2/1263977-immagine-sfocata-di-un-treno-della-metropolitana-gratuito-foto.jpeg");
+    background-size: cover;
+    
+    
+}
 
 .container-input{
     background-color: #001632;
