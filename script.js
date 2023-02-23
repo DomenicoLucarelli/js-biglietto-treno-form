@@ -31,6 +31,7 @@ btnEl.addEventListener("click", function(){
     distanzaEl=document.getElementById("distanza").value;
 
     bigliettoEl=document.getElementById("biglietto")
+
     bigliettoEl.style.display=("block");
 
     
@@ -42,7 +43,7 @@ btnEl.addEventListener("click", function(){
 
         let prezzoFinale = ( prezzoNonScontato - (prezzoNonScontato * 20 / 100 ) )
 
-        document.getElementById("nome-mostrato").value= nomeEl;
+        document.getElementById("nome-mostrato").innerHTML= nomeEl;
 
         document.getElementById("cognome-mostrato").innerHTML= cognomeEl;
 
@@ -51,6 +52,8 @@ btnEl.addEventListener("click", function(){
         document.getElementById("codice-mostrato").innerHTML= Math.floor((Math.random() * 1000) + 1);
 
         document.getElementById("prezzo-mostrato").innerHTML= prezzoFinale.toFixed(2) + " €";
+
+        
 
 
 
