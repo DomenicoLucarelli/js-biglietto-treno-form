@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container-input{
+    background-color: #001632;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 600px;
+    padding: 30px 20px;
+    margin: 20px auto;
+
+    border-radius: 40px;
+
+    text-align: center;
+}
+h2{
+    color: white;
+    margin-bottom: 15px;
+    font-size: 35px;
+
+}
+
+label{
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+input{
+    margin-bottom:10px ;
+    border: none;
+    height: 25px;
+    padding: 3px 5px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input{ 
+    -moz-appearance: textfield;
+    appearance: textfield;
+     
+}
+
+#btn{
+    border: none;
+    height: 25px;
+    border-radius: 12px;
+    background-color: #00df64;
+    color: white;
+    padding:  10px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 2px;
+    cursor: pointer;
+
+}
+
+#biglietto{
+    background-color: #001632;
+    min-height: 100px;
+    max-width: 650px;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px ;
+    
+}
+
+.info-biglietto{
+    display: flex;
+    color: white;
+    
+}
+
+#dati-anagrafici{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    width: 50%;
+}
+
+.info-type{
+    font-weight: bold;
+    
+}
+
+.personal-info{
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+#prezzo{
+    flex-grow: 1;
+    text-align: left;
+    align-self: center;
+}

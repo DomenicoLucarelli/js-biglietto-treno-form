@@ -1,41 +1,83 @@
 /*
--al cliccare di un tasto prendi i km e età inseriti dall'utente e memorizzali in una varoiabile
--calcolo prezzo totale senza eventuali sconti (0.21 * numero km da percorrere)
+-creo variabile che recupera l'ID del button
+-creo variabili per i dati utente
+-faccio inserire dati all'uteente
+-al click del button si genera l'evento{
+    recupero i dati inseriti dall'utente tramite id
+    calcolo il prezzo non scontato e lo memorizzo in una variabile
+    uso l'if dell'esercizio biglietto treno avendo cura che si visualizzino 
+    tutti i dati in un altro biglietto tramite la proprietà innerHTML
+}
 
 
 */
 
 let btnEl = document.getElementById("btn");
-let prezzoEl = document.getElementById("prezzo");
+
 // console.log(btnEl)
 let etaEl ;
 let distanzaEl ;
+let nomeEl ;
+let cognomeEl ;
 
 btnEl.addEventListener("click", function(){
+    nomeEl=document.getElementById("nome").value;
 
-etaEl=document.getElementById("eta").value;
+    cognomeEl=document.getElementById("cognome").value;
 
-distanzaEl=document.getElementById("distanza").value;
+    etaEl=document.getElementById("eta").value;
 
-let prezzoNonScontato = (0.21 * distanzaEl);
+    distanzaEl=document.getElementById("distanza").value;
+
+    let prezzoNonScontato = (0.21 * distanzaEl);
 // console.log(prezzoNonScontato);
 
     if(etaEl<18){
 
         let prezzoFinale = ( prezzoNonScontato - (prezzoNonScontato * 20 / 100 ) )
-        console.log("Il costo del biglietto è " + prezzoFinale.toFixed(2) + " €")
+
+        document.getElementById("nome-mostrato").innerHTML= nomeEl;
+
+        document.getElementById("cognome-mostrato").innerHTML= cognomeEl;
+
+        document.getElementById("eta-mostrata").innerHTML= etaEl;
+
+        document.getElementById("prezzo-mostrato").innerHTML= prezzoFinale.toFixed(2) + " €";
+
+
+
+        // console.log("Il costo del biglietto è " + prezzoFinale.toFixed(2) + " €")
 
         
     
     }else if(etaEl>65){
     
          let prezzoFinale = ( prezzoNonScontato - (prezzoNonScontato * 40 / 100 ) )
-        console.log("Il costo del biglietto è " + prezzoFinale.toFixed(2) + " €")
+
+         document.getElementById("nome-mostrato").innerHTML= nomeEl;
+
+         document.getElementById("cognome-mostrato").innerHTML= cognomeEl;
+
+         document.getElementById("eta-mostrata").innerHTML= etaEl;
+
+         document.getElementById("prezzo-mostrato").innerHTML= prezzoFinale.toFixed(2) + " €";
+
+        // console.log("Il costo del biglietto è " + prezzoFinale.toFixed(2) + " €")
     
     
     }else{
+
+         let prezzoFinale = prezzoNonScontato
+
+         document.getElementById("nome-mostrato").innerHTML= nomeEl;
+
+         document.getElementById("cognome-mostrato").innerHTML= cognomeEl;
+
+         document.getElementById("eta-mostrata").innerHTML= etaEl;
+
+         document.getElementById("prezzo-mostrato").innerHTML= prezzoFinale.toFixed(2) + " €";
     
-        console.log("Il costo del biglietto è " + prezzoNonScontato.toFixed(2) + " €" )
+        // console.log("Il costo del biglietto è " + prezzoNonScontato.toFixed(2) + " €" )
     
     }
 });
