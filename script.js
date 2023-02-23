@@ -42,6 +42,8 @@ btnEl.addEventListener("click", function(){
 
         document.getElementById("eta-mostrata").innerHTML= etaEl;
 
+        document.getElementById("codice-mostrato").innerHTML= Math.floor((Math.random() * 1000) + 1);
+
         document.getElementById("prezzo-mostrato").innerHTML= prezzoFinale.toFixed(2) + " €";
 
 
@@ -60,6 +62,9 @@ btnEl.addEventListener("click", function(){
 
          document.getElementById("eta-mostrata").innerHTML= etaEl;
 
+         document.getElementById("codice-mostrato").innerHTML= Math.floor((Math.random() * 1000) + 1);
+
+
          document.getElementById("prezzo-mostrato").innerHTML= prezzoFinale.toFixed(2) + " €";
 
         // console.log("Il costo del biglietto è " + prezzoFinale.toFixed(2) + " €")
@@ -74,6 +79,8 @@ btnEl.addEventListener("click", function(){
          document.getElementById("cognome-mostrato").innerHTML= cognomeEl;
 
          document.getElementById("eta-mostrata").innerHTML= etaEl;
+         
+         document.getElementById("codice-mostrato").innerHTML= Math.floor((Math.random() * 1000) + 1);
 
          document.getElementById("prezzo-mostrato").innerHTML= prezzoFinale.toFixed(2) + " €";
     
