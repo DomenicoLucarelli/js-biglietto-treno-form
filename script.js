@@ -6,10 +6,12 @@
 */
 
 let btnEl = document.getElementById("btn");
+let prezzoEl = document.getElementById("prezzo");
 // console.log(btnEl)
 let etaEl ;
 let distanzaEl ;
 
+btnEl.addEventListener("click", function(){
 
 etaEl=document.getElementById("eta").value;
 
@@ -18,11 +20,12 @@ distanzaEl=document.getElementById("distanza").value;
 let prezzoNonScontato = (0.21 * distanzaEl);
 // console.log(prezzoNonScontato);
 
-btnEl.addEventListener("click", function(){
     if(etaEl<18){
 
         let prezzoFinale = ( prezzoNonScontato - (prezzoNonScontato * 20 / 100 ) )
         console.log("Il costo del biglietto è " + prezzoFinale.toFixed(2) + " €")
+
+        
     
     }else if(etaEl>65){
     
